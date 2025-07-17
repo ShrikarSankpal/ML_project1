@@ -13,7 +13,7 @@ def load_data():
 
 def get_hyperparameter_combinations():
     param_grid = {
-        "n_estimators": [50, 100],
+        "n_estimators": [50, 100, 150],
         "max_depth": [5, 10],
         "min_samples_split": [2, 5]
     }
