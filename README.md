@@ -51,6 +51,7 @@ project1/
 
 # Create and activate virtual environment
 python3.10 -m venv project1-env
+
 source project1-env/bin/activate
 
 # Install dependencies
