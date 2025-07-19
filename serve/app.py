@@ -7,6 +7,7 @@ import joblib
 import numpy as np
 import os
 
+
 from paths import BEST_MODEL_DIR
 
 MODEL_PATH = os.path.join(BEST_MODEL_DIR, "model", "model.pkl")
