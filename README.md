@@ -14,17 +14,6 @@ This project demonstrates a full machine learning workflow for predicting house 
 
 ## Project Structure
 project1/
-│
-├── etl/ # Data loading and preprocessing
-├── train/ # Model training
-├── select_model/ # Model selection using MLflow
-├── serve/ # FastAPI app to serve predictions
-├── tests/ # Tests using pytest
-├── models/ # Saved models (gitignored)
-├── data/ # Data storage (gitignored)
-├── paths.py # Centralized path management
-└── requirements.txt
-
 ├── __init__.py
 ├── data
 │   ├── data_for_serving
@@ -35,6 +24,15 @@ project1/
 ├── etl
 │   ├── process_servering_data.py
 │   └── process_training_data.py
+├── models
+│   └── best
+│       ├── model
+│       │   ├── MLmodel
+│       │   ├── conda.yaml
+│       │   ├── model.pkl
+│       │   ├── python_env.yaml
+│       │   └── requirements.txt
+│       └── run_id.txt
 ├── paths.py
 ├── requirements.txt
 ├── select_model
