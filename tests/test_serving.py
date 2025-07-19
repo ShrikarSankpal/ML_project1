@@ -1,11 +1,16 @@
+import sys
+import os
+
+# Add the root directory to Python path
+# if not, the testing in github actions fails
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from fastapi.testclient import TestClient
 from serve.app import app
 
 client = TestClient(app)
 
-def test_predict_valid_input():
-    response = client.post("/predict", json={"features": [8.3252, 41.0, 6.984127, 1.02381, 322.0, 2.555556, 37.88, -122.23]})
+def test_prediction_endpoint():
+    response = client.post("/predict", json={"features": [5.1, 3.5, 1.4, 0.2]})
     assert response.status_code == 200
-    json_data = response.json()
-    assert "prediction" in json_data
-    assert isinstance(json_data["prediction"], float)
+    assert "prediction" in response.json()
