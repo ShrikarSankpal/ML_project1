@@ -25,6 +25,30 @@ project1/
 ├── paths.py # Centralized path management
 └── requirements.txt
 
+├── __init__.py
+├── data
+│   ├── data_for_serving
+│   └── data_for_training
+│       ├── features.csv
+│       └── target.csv
+├── dockerfile
+├── etl
+│   ├── process_servering_data.py
+│   └── process_training_data.py
+├── paths.py
+├── requirements.txt
+├── select_model
+│   └── select.py
+├── serve
+│   ├── __init__.py
+│   └── app.py
+├── tests
+│   └── test_serving.py
+├── train
+│   └── train.py
+└── utils
+    └── __init__.py
+
 ## Setup
 
 # Create and activate virtual environment
